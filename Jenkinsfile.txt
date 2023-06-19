@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/KateSema2000/jenkins.git'
+            }
+        }
+        stage('Build'){
+           steps {
+                echo "Build is running"
+            }
+        }
+        stage('Test'){
+           steps {
+                echo "Test is running"
+            }
+        }
+    }
+}
